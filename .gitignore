@@ -1,0 +1,38 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/languages
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/cache/*
+web/app/themes/*/assets/dist/css/*.css
+web/app/themes/*/assets/dist/js/*.js
+
+# WordPress
+web/wp
+web/.htaccess
+sitemap.xml
+sitemap.xml.gz
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml
+
+# Development files
+.idea
+.DS_Store
+*.map
+node_modules
+package-lock.json

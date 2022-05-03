@@ -1,0 +1,61 @@
+//
+//  Mixin
+//
+
+//Reset
+@mixin delete-hover{
+  &:hover,&:focus{
+    color: initial;
+    text-decoration: none;
+  }
+}
+
+@mixin delete-outline($color-hover: #fff){
+  &:hover,&:focus,&:active,&.slick-slide:focus{
+    outline: none !important;
+    color: $color-hover;
+  }
+}
+
+@mixin delete-hr{
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  border: 0;
+  border-top: 0px solid transparent;
+}
+
+//Fonts
+@mixin fluid-typography($max-font-size,$min-font-size,$max-vw:$width-xl,$min-vw:$width-md){
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+//View Point
+@mixin vh($property,$dimension,$max-vh: $height-xl){
+
+  $dimension: strip-unit($dimension);
+  $max-vh: strip-unit($max-vh);
+
+  $calculate: (100 * $dimension) / $max-vh;
+
+  #{$property}: $calculate + vh;
+
+  @media (min-height: $max-vh + px){
+    #{$property}: $dimension + px;
+  }
+
+}
