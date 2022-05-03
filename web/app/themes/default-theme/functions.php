@@ -28,7 +28,7 @@ require get_template_directory() . '/config/taxonomy-config.php';
 /*
  *  Disable comment
  * */
-//require get_template_directory() . '/config/disableComment.php';
+require get_template_directory() . '/config/disableComment.php';
 
 /*
  *  Add feature image

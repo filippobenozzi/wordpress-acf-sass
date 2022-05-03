@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0effe3a61178a7d496ad266b1d3ceae3",
+    "content-hash": "436bc0617f23f32f55c74dec96256f4d",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -561,7 +561,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/refs/tags/5.9.3"
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/refs/tags/5.9.3",
+                "reference": "5.9.3"
             },
             "require": {
                 "php": ">=5.3.2",
