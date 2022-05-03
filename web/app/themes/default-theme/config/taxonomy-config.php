@@ -36,4 +36,4 @@ function custom_taxonomy() {
     register_taxonomy( 'categorie', array( 'portfolio' ), $args );
 
 }
-add_action( 'init', 'custom_taxonomy', 0 );
+add_action( 'init', 'custom_taxonomy', 0 ); */
